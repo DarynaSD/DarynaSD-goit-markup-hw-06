@@ -450,8 +450,24 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscribe-container">
+          <p class="media-header">Subscribe</p>
+
+          <div class="form-wrap">
+            <input type="email" name="email" placeholder="E-mail" />
+            <button type="submit" class="submit-button">
+              Subscribe
+              <svg width="24px" height="24px" class="submit-icon">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- backdrop -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <!-- button -->
@@ -463,12 +479,11 @@
 
         <!-- form -->
         <form class="form">
-
-
-<div class="b-wrap">
-  <b class="form-title">Leave your contacts and we will call you back</b>
-</div>
-          
+          <div class="b-wrap">
+            <b class="form-title"
+              >Leave your contacts and we will call you back</b
+            >
+          </div>
 
           <div class="form-field">
             <label for="name">Name</label>
@@ -482,7 +497,7 @@
 
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <input type="email" name="email" id="email" />
           </div>
 
           <div class="comment">
@@ -490,18 +505,15 @@
             <textarea
               name="comment"
               id="comment"
-              rows="10"
               placeholder="Text input"
-              
             ></textarea>
           </div>
 
           <div class="checkbox">
             <input type="checkbox" name="policy" id="policy" />
             <label for="policy">
-              I accept the terms and conditions of the <a href=""
-                >Privacy Policy</a
-              ></label
+              I accept the terms and conditions of the
+              <a href="">Privacy Policy</a></label
             >
           </div>
 
