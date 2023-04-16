@@ -488,16 +488,25 @@
           <div class="form-field">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" />
+            <svg class="field-icon icon-person" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label for="phone">Phone</label>
             <input type="tel" name="phone" id="phone" />
+            <svg class="field-icon" width="18px" height="24px">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" />
+            <svg class="field-icon" width="18px" height="24px">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
           </div>
 
           <div class="comment">
@@ -510,11 +519,25 @@
           </div>
 
           <div class="checkbox">
-            <input type="checkbox" name="policy" id="policy" />
-            <label for="policy">
+            <label for="policy" class="check">
+              <input
+                type="checkbox"
+                name="policy"
+                id="policy"
+                class="check-input"
+              />
+
+              <svg width="16px" height="16px" class="check-box-on">
+                <use href="./images/icons.svg#icon-check-on"></use>
+              </svg>
+
+              <svg width="16px" height="16px" class="check-box-off">
+                <use href="./images/icons.svg#icon-check-off"></use>
+              </svg>
+
               I accept the terms and conditions of the
-              <a href="">Privacy Policy</a></label
-            >
+              <a href="">Privacy Policy</a>
+            </label>
           </div>
 
           <button type="submit" class="button hero-button">Send</button>

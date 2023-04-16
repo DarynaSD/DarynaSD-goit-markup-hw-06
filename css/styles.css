@@ -252,6 +252,7 @@ color: #FFFFFF;
   cursor: pointer;
     
   transition: background-color var(--time-and-cubic);
+  transition: transform var(--time-and-cubic);
     
     }
 
@@ -263,6 +264,12 @@ color: #FFFFFF;
   .submit-button:hover,
   .submit-button:focus {
       background-color: #404BBF;
+    }
+
+  .submit-button:hover .submit-icon,
+  .submit-button:hover .submit-icon
+  {
+   transform: scale(0.8);
     }
 
 /* social media */
@@ -751,15 +758,36 @@ display: flex;
 flex-direction: column;
 }
 
+.form-field {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  display: block;
+  bottom: 8px;
+  left: 16px;
+  fill: var(--head-color);
+
+  transition: fill var(--time-and-cubic);
+}
+
+.icon-person {
+  bottom: 11px;
+}
+
 .form-field input {
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
+  padding-left: 38px;
 }
 
 /* .input:hover {
   border: 1px solid tomato;
 } */
+
+
 
 .comment textarea {
     border: 1px solid rgba(46, 47, 66, 0.2);
@@ -829,3 +857,63 @@ flex-direction: column;
   outline: transparent;
   border: 1px solid var(--button-text-color);
 }
+
+.form-field:focus-within .field-icon,
+input:checked + .field-icon {
+    fill: var(--button-text-color);
+}
+
+/* чекбокс */
+
+/* .check-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+} */
+
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check {
+  padding-left: 24px;
+  position: relative;
+}
+
+.check-box-on {
+  position: absolute;
+  top: -1px;
+  margin-left: -24px;
+
+  border: none;
+  border-radius: 2px;
+
+  opacity: 0;
+}
+
+.check-box-off {
+  position: absolute;
+  top: -1px;
+  margin-left: -24px;
+
+  border: none;
+
+  opacity: 1;
+}
+
+.check-input:checked + .check-box-on {
+  opacity: 1;
+}
+
+.check-input:checked + .check-box-off {
+  opacity: 0;
+}
+
+
+
+
